@@ -1,11 +1,15 @@
 import { minutesToMs } from "@/utils";
 
 describe("minutesToMs", () => {
-  test("분 -> 밀리초 변환(1분)", () => {
+  test("1분 -> 60000ms", () => {
     expect(minutesToMs(1)).toBe(60000);
   });
 
-  test("분 -> 밀리초 변환(0분)", () => {
+  test("5분 -> 300000ms", () => {
+    expect(minutesToMs(5)).toBe(300000);
+  });
+
+  test("0분 -> 0ms", () => {
     expect(minutesToMs(0)).toBe(0);
   });
 });
